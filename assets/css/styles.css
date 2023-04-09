@@ -47,15 +47,18 @@ a {
 }
 
 /* ================Header================ */
-.header {
+.fixed-header {
+  z-index: 1;
+  position: sticky;
+  top: -12px;
   background-color: #e6f0ff;
-  height: 100vh;
+  padding-top: 26px;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 38px;
+  padding: 12px 0;
 }
 
 .navbar .actions {
@@ -95,8 +98,16 @@ a {
   opacity: 90%;
 }
 
+/* ================Hero================ */
+.hero-wrap {
+  display: flex;
+  position: relative;
+  height: calc(100vh - 90px);
+  background-color: #e6f0ff;
+}
+
 .hero {
-  margin-top: 130px;
+  padding-top: 130px;
 }
 
 .hero .info {

@@ -36,6 +36,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
   </head>
   <body>
@@ -44,6 +45,17 @@
       <header class="fixed-header">
        <div class="content">
           <nav class="navbar">
+             <!-- Table/mobile toggle menu -->
+         <label for="menu-checkbox">
+          <svg 
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg" 
+          height="1em" 
+          class="toggle-menu"
+          viewBox="0 0 448 512">
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </label>
+
             <!-- logo -->
             <a href="#"><img src="./assets/img/logo.svg" alt="Bensnik." /></a>
     
@@ -65,8 +77,31 @@
        </div>
       </header>
 
+      <!-- Table/mobile header -->
+      <header class="mobile-header">
+        <input type="checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+
+        <label for="menu-checkbox" class="menu-overlay"></label>
+
+        <div class="menu-drawer">
+          <!-- logo -->
+        <a href="#" ><img src="./assets/img/logo.svg" alt="Bensnik." /></a>
+
+         <!-- navigation -->
+         <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="hide-on-tablet separate"><a href="#!">Sign in</a></li>
+          <li class="hide-on-tablet"><a href="#!">Sign up</a></li>
+        </ul>
+        </div>
+      </header>
+
       <!-- Main -->
-      <main>
+      <main >
       <!-- Hero -->
       <div class="hero-wrap">
         <div class="content">
@@ -85,11 +120,22 @@
               alt="Welcome to Besnik Agency"
               class="hero-img"
             />
-        </div>
+
+            <a href="#clients">
+              <div class="go-down-icon"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z"/></svg></div>
+         
+            </a>
+
+            <script>
+              document.querySelector('.go-down-icon').onclick = function(){
+                document.querySelector('.go-down-icon').style.display = 'none'
+              }
+            </script>
+         </div>
       </div>
 
       <!-- Clients -->
-      <div class="clients">
+      <div id="clients" class="clients">
         <div class="content">
           <div class="row">
             <!-- Logo -->
@@ -266,6 +312,10 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="show-on-mobile" >
+            <a href="#!" class="btn">View All Properties</a>
           </div>
         </div>
       </div>
@@ -462,7 +512,7 @@
       </main>
       
       <!-- Footer -->
-      <footer class="footer">
+      <footer class="footer" >
         <div class="content">
           <div class="row row-top">
             <!-- Product column -->

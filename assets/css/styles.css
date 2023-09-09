@@ -310,7 +310,8 @@ a {
 
 .featured .list {
   margin-top: 70px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -583,7 +584,8 @@ a {
 
 .footer .row-top {
   display: flex;
-  gap: 185px;
+  row-gap: 85px;
+  column-gap: 185px;
 }
 
 .footer .heading {
@@ -648,4 +650,16 @@ a {
   font-weight: 400;
   font-size: 1.4rem;
   color: #c2c2c2;
+}
+
+/* Animation */
+@keyframes pumping {
+  0% {
+    scale: 100%;
+    opacity: 70%;
+  }
+  100% {
+    scale: 130%;
+    opacity: 100%;
+  }
 }

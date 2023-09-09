@@ -225,7 +225,7 @@
 
   /* Hero */
   .hero-wrap {
-    height: calc(100vh - 65px);
+    height: calc(100vh - 80px);
   }
 
   .hero-wrap .sub-title {
